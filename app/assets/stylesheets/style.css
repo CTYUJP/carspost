@@ -1,0 +1,68 @@
+/* リセットCSS */
+body {
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  padding: 10px 0;
+  margin: 0;
+}
+
+ul,li {
+  padding: 0;
+  margin: 0;
+}
+
+/* ヘッダー */
+.header {
+  height: 80px;
+  width: 100%;
+  background-color: #fdda67;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.header_title {
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_title h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+}
+
+.header_nav a.post {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.footer {
+  padding: 2px;
+  font-size: 15px;
+  color: #999;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

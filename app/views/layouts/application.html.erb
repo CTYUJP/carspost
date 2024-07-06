@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <title>Carspost</title>
+    <title>CARSPOST</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,19 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="header_title">
+        <h1>CARSPOST</h1>
+      </div>
+      <div class="header_nav">
+        <a class="post" href="/users/show">マイページ</a>
+      </div>
+    </header>
     <%= yield %>
+    <footer class="footer">
+      <p>
+        Copyright CARSPOST 2024.
+      </p>
+    </footer>
   </body>
 </html>
