@@ -18,7 +18,7 @@ ul,li {
 .header {
   height: 80px;
   width: 100%;
-  background-color: #fdda67;
+  background-color: #354174;
   display: flex;
   justify-content:space-between;
   align-items: center;
@@ -27,16 +27,8 @@ ul,li {
 .header_title {
   text-align: center;
   flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header_title h1 {
-  margin: 0;
-  font-size: 24px;
-  color: #333;
-  font-weight: bold;
+  margin-left: 10%;
+  color: #ffffff;
 }
 
 .header_nav {
@@ -46,7 +38,7 @@ ul,li {
 
 .header_nav a.post {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-size: 16px;
   font-weight: bold;
   margin-right: 20px;
@@ -56,6 +48,7 @@ main {
   flex-grow: 1;
 }
 
+/* フッター */
 .footer {
   padding: 2px;
   font-size: 15px;
