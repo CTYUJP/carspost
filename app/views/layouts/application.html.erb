@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Carspost</title>
+    <title>CARSPOST</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,24 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav_left">
+            <div class="nav_title">
+              <h1>CARSPOST</h1>
+            </div>
+          </div>
+          <div class="nav_right">
+            <%= link_to "ログイン", "#", class: :nav_btn %>
+            <%= link_to "新規登録", "#", class: :nav_btn %>
+          </div>
+        </div>
+      </div>
+    </header>
     <%= yield %>
+    <footer class="footer">
+      <p class="copyright">Copyright © CARSPOST 2024.</p>
+    </footer>
   </body>
 </html>
