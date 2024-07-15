@@ -1,0 +1,37 @@
+<!--
+<div class="post_card">
+  <div class="post_contents">
+    <% @posts.each do |post| %>
+      <%= link_to post.name, "/users/#{current_user.id}", class: 'post_user' %>
+      <%= link_to image_tag(post.image_url, class: 'post_img') %>
+      <div class="post_text">
+        <%= link_to post.text, root_path, class: 'post_text' %>
+      </div>
+    <% end %>
+  </div>
+</div>
+-->
+
+<!--
+  <% @posts.each do |post| %>
+    <div class="content_post" style="background-image: url(<%= post.image %>);">
+      <p><%= post.text %></p>
+      <span class="name"><%= post.name %></span>
+    </div>
+  <% end %>
+</div>
+-->
+
+<!--
+<div class="card_list">
+  <% @posts.each do |post| %>
+    <div class="content_post" style="background-image: url(<%= post.image %>);">
+      <p class="card_text">
+        <%= post.text %>
+      </p>
+      <span class="card_name">
+        <%= post.name %>
+      </span>
+    </div>
+</div>
+-->

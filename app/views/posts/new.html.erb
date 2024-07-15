@@ -1,0 +1,10 @@
+<div class="contents box">
+  <div class="container">
+    <h2>ポスト作成</h2>
+    <%= form_with(model: @post, local: true) do |form| %>
+      <%= form.text_field :image, placeholder: "画像を選択する" %>
+      <%= form.text_area :text, placeholder: "コメントを入力", rows: "10" %>
+      <%= form.submit "シェア" %>
+    <% end %>
+  </div>
+</div>

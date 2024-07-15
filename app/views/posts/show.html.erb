@@ -1,0 +1,12 @@
+<div class="contents row">
+  <div class="content_post" style="background-image: url(<%= @post.image %>);">
+    <span class="name"><%= @post.user.name %>
+    </span>
+    <p><%= @post.text %></p>
+    <ul class="more_list">
+      <li>
+        <%= link_to "削除", post_path(@post.id), data: { turbo_method: :delete } %>
+      </li>
+    </ul>
+  </div>
+</div>
