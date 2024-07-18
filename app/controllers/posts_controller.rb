@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
+  before_action :set_post, only: [:edit, :show,]
 
 
   def index
@@ -10,13 +11,32 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def edit
+  end
+
   def show
-    @post = Post.find(params[:id])
   end
 
   def create
-    Post.create(post_params)
-    redirect_to "/"
+    @post = Post.new(post_params)
+    if @post.save 
+      flash[:notice] = "投稿を作成しました" 
+      redirect_to posts_path
+    else
+      render "new" 
+    end
+  end 
+
+  # def create
+  #   Post.create(post_params)
+  #   redirect_to root_path
+  # end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:notice] = "投稿を削除しました"
+    redirect_to root_path
   end
 
   private
@@ -29,6 +49,10 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:image, :text).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 
 end

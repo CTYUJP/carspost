@@ -1,12 +1,22 @@
-<div class="contents row">
-  <div class="content_post" style="background-image: url(<%= @post.image %>);">
-    <span class="name"><%= @post.user.name %>
-    </span>
-    <p><%= @post.text %></p>
-    <ul class="more_list">
-      <li>
-        <%= link_to "削除", post_path(@post.id), data: { turbo_method: :delete } %>
-      </li>
-    </ul>
+<main class="main">
+  <div class="inner">
+    <div class="post_wrapper">
+      <div class="post">
+        <div class="post_body">
+          <%= link_to @post.user.name, user_path, class: 'post_user' %>
+          <div class="post_img">
+            <%= image_tag @post.image %>
+          </div>
+            <p class="post_text">
+              <%= @post.text %>
+            </p>
+        </div>
+          <div class="post_menu">
+            <% if user_signed_in? && current_user.id == @post.user_id %>
+              <%= link_to "削除", post_path(@post.id), data: { turbo_method: :delete, turbo_confirm: "本当に削除しますか？" } %>
+            <% end %>
+          </div>
+      </div>
+    </div>
   </div>
-</div>
+</main>
