@@ -36,27 +36,23 @@ a {
 
 /* ヘッダー */
 .header {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   padding: 20px 0;
   background-color: #354174;
 }
-
 .inner {
   width: 1024px;
   margin: 0 auto;
 }
-
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.nav_title {
+.nav_title a {
   color: #ffffff;
 }
-
 .nav_btn {
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -78,54 +74,138 @@ a {
   opacity: 0.5;
 } */
 
-/* ボディ */
+/* ボディ：index*/
+.greeting{
+  margin-bottom: 10px;
+}
 .greeting_link{
   text-decoration: underline;
 }
-.page-heading {
+/* .page-heading {
   font-size: 30px;
   margin-bottom: 28px;
-}
-.post_wrapper {
+} */
+.card_wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   justify-content: space-between;
-  align-items: center;
   min-height: calc(100vh - 161px);
 }
-.post_list {
+.card {
   width: calc((100% - 50px) / 3);
+  padding: 20px;
   margin-bottom: 40px;
 }
-
-.post_img {
-  margin-bottom: 16px;
+.card_img {
+  margin-bottom: 5px;
 }
-
-.post_text {
+.card_text {
+  height: 60px;
   display: block;
-  font-size: 20px;
   margin-bottom: 8px;
-  font-weight: bold;
+  font-size: 16px;
 }
-
-.post_user {
+.card_user {
   display: block;
   font-size: 12px;
-  color: #999;
+  padding: 5px;
+  border-top: solid 1px #999;
+  color: #000000;
+  text-align: left;
+  text-decoration: underline;
+}
+
+/* ボディ：index*/
+.post_wrapper {
+  display: flex;
+  justify-content: center;
+}
+.post_body {
+  display: grid;
+  justify-items: center;
+}
+.post_user {
+  font-size: 30px;
+  text-decoration: underline;
+}
+.post_img {
+  width: 660px;
+  height: 470px;
+  object-fit: cover;
+}
+.post_text {
+  width: 660px;
+}
+.post_menu {
   text-align: right;
   text-decoration: underline;
+}
+
+
+/* ユーザー管理機能 */
+.contents.box {
+  width: 30%;
+  margin: auto;
+}
+div.contents.box h2 {
+  text-align: center;
+  font-family: "游ゴシック", "YuGothic";
+}
+div.contents.box p {
+  text-align: center;
+  font-family: "游ゴシック", "YuGothic";
+  font-weight: bold;
+  font-size: 10px;
+  margin-bottom: 30px;
+}
+
+div.error_contents {
+  font-size: 17px;
+  margin: 30px 0;
+  color: red;
+}
+.error_message {
+  color: red;
+}
+
+.container {
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  background-color: white;
+  border-radius: 5px;
+}
+form input,
+form textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  max-width: 100%;
+  min-width: 100%;
+}
+form input[type="submit"] {
+  margin-top: 10px;
+  background-color: #354174;
+  border-radius: 10px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+  font-family: "游ゴシック", "YuGothic";
+}
+form input[type="submit"]:hover {
+  background-color: #5d6eb6;
 }
 
 /* フッター */
 .footer {
   padding: 10px 0;
-  background-color: #354174;
+  margin: 30px 0;
 }
-
 .copyright {
   text-align: center;
-  color: #ffffff;
+  color: #3541742d;
   font-size: 15px;
   font-weight: bold;
 }

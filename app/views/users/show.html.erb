@@ -1,0 +1,16 @@
+<main class="main">
+  <div class="inner">
+    <p><%= @name %>さんの投稿一覧</p>
+    <div class="card_wrapper">
+      <% @posts.each do |post| %>
+        <div class="card">
+          <%= link_to post.user.name, user_path(post.user), class: 'card_user' %>
+          <%= link_to image_tag(post.image, class: 'card_img'), post_path(post) %>
+            <p class="card_text">
+              <%= link_to post.text, post_path(post) %>
+            </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</main>

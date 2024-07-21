@@ -1,10 +1,21 @@
-<div class="contents row">
-  <% @posts.each do |post| %>
-    <div class="content_post" style="background-image: url(<%= post.image %>);">
-      <p><%= post.text %></p>
-      <span class="name">
-        <%= post.name %>
-      </span>
+<main class="main">
+  <div class="inner">
+    <% if user_signed_in? %>
+      <div class="greeting">
+        こんにちは、
+        <%= link_to "#{current_user.name}さん", user_path(current_user), class: 'greeting_link' %>
+      </div>
+    <% end %>
+    <div class="card_wrapper">
+      <% @posts.each do |post| %>
+        <div class="card">
+          <%= link_to post.user.name, user_path(post.user), class: 'card_user' %>
+          <%= link_to image_tag(post.image, class: 'card_img'), post_path(post) %>
+            <p class="card_text">
+              <%= link_to post.text, post_path(post) %>
+            </p>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-</div>
+  </div>
+</main>
