@@ -5,6 +5,12 @@ class User < ApplicationRecord
 
   has_many :posts
 
-  validates :name, :email, :password, presence: { message: 'は必須項目です。' }
+  validates :name,                presence: true,
+                                  length: { maximum: 50 }
+
+  validates :email,               presence: true,
+                                  uniqueness: true
+
+  validates :password,            presence: true
 
 end

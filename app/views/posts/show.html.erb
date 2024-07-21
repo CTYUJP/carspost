@@ -3,7 +3,7 @@
     <div class="post_wrapper">
       <div class="post">
         <div class="post_body">
-          <%= link_to @post.user.name, user_path, class: 'post_user' %>
+          <%= link_to @post.user.name, user_path(@post.user), class: 'post_user' %>
           <div class="post_img">
             <%= image_tag @post.image %>
           </div>

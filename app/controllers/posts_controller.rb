@@ -1,36 +1,28 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
-  before_action :set_post, only: [:edit, :show,]
+  # before_action :set_post, only: [:show]
 
 
   def index
-    @posts = Post.all
+    @posts = Post.includes(:user)
   end
 
   def new
     @post = Post.new
   end
 
-  def edit
-  end
-
-  def show
-  end
-
   def create
     @post = Post.new(post_params)
     if @post.save 
-      flash[:notice] = "投稿を作成しました" 
-      redirect_to posts_path
+      redirect_to root_path
     else
-      render "new" 
+      render :new
     end
   end 
 
-  # def create
-  #   Post.create(post_params)
-  #   redirect_to root_path
-  # end
+  def show
+    @post = Post.find(params[:id])
+  end
 
   def destroy
     @post = Post.find(params[:id])
@@ -51,8 +43,8 @@ class PostsController < ApplicationController
     params.require(:post).permit(:image, :text).merge(user_id: current_user.id)
   end
 
-  def set_post
-    @post = Post.find(params[:id])
-  end
+  # def set_post
+  #   @post = Post.find(params[:id])
+  # end
 
 end
