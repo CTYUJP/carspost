@@ -75,21 +75,17 @@ a {
 } */
 
 /* ボディ：index*/
-.greeting{
-  margin-bottom: 10px;
-}
+
 .greeting_link{
   text-decoration: underline;
 }
-/* .page-heading {
-  font-size: 30px;
-  margin-bottom: 28px;
-} */
+
 .card_wrapper {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-between;
   min-height: calc(100vh - 161px);
+  overflow-wrap: break-word;
 }
 .card {
   width: calc((100% - 50px) / 3);
@@ -115,14 +111,14 @@ a {
   text-decoration: underline;
 }
 
-/* ボディ：index*/
+/* ボディ：show*/
 .post_wrapper {
   display: flex;
   justify-content: center;
 }
 .post_body {
-  display: grid;
-  justify-items: center;
+  /* display: grid; */
+  /* justify-items: center; */
 }
 .post_user {
   font-size: 30px;

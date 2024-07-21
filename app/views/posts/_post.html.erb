@@ -1,13 +1,11 @@
-<!--
-    <div class="post_card">
-      <div class="content_post">
-        <% @posts.each do |post| %>
-          <%= link_to post.user.name, "/users/#{post.user.id}", class: 'post_user' %>
-          <%#<%= link_to image_tag(post.image_url, class: 'post_img') %>
-          <div class="post_text">
-            <%= link_to post.text, "posts/#{post.id}" %>
-          </div>
-        <% end %>
-      </div>
-    </div>
--->
+<div class="card">
+  <%= link_to post.user.name, user_path(post.user), class: 'card_user' %>
+  <% if post.image.attached? %>
+    <%= link_to post_path(post), class: 'card_img' do %>
+      <%= image_tag(post.image.variant(resize: '660x470')) %>
+    <% end %>
+  <% end %>
+  <p class="card_text">
+    <%= link_to post.text, post_path(post) %>
+  </p>
+</div>
