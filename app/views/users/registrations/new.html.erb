@@ -15,7 +15,7 @@
       </div>
 
       <div class="field">
-        <%= f.label :password, "パスワード" %>  (10文字以内)<br />
+        <%= f.label :password, "パスワード" %>  (10文字以上)<br />
         <% @minimum_password_length %>
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
