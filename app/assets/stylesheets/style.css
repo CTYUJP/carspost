@@ -62,24 +62,10 @@ a {
   font-weight: bold;
 }
 
-/* .nav__logout {
-  display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #87CEFA;
-  text-decoration: none;
-  user-select: none;
-}
-.nav__logout:hover{
-  opacity: 0.5;
-} */
-
 /* ボディ：index*/
-
 .greeting_link{
   text-decoration: underline;
 }
-
 .card_wrapper {
   display: flex;
   flex-wrap: wrap-reverse;
@@ -116,10 +102,6 @@ a {
   display: flex;
   justify-content: center;
 }
-.post_body {
-  /* display: grid; */
-  /* justify-items: center; */
-}
 .post_user {
   font-size: 30px;
   text-decoration: underline;
@@ -154,7 +136,6 @@ div.contents.box p {
   font-size: 10px;
   margin-bottom: 30px;
 }
-
 div.error_contents {
   font-size: 17px;
   margin: 30px 0;
@@ -163,7 +144,6 @@ div.error_contents {
 .error_message {
   color: red;
 }
-
 .container {
   margin: 20px 0;
   padding: 30px;
