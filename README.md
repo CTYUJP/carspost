@@ -10,7 +10,16 @@
 
 ## 制作背景
 
-作成者である私自身が車が好きで、「車」好きの方が扱うSNSがあったら便利だなという思いで作成しました。
+作成者である私自身が車が好きで、「車」をみたい！、「車」が好き！、「車」を自慢したい！という方が扱うSNSがあったら便利だなという思いで作成しました。
+
+# 使用gem
+
+* gem "pry-rails"
+* gem "devise"
+* gem "rails-i18n"
+* gem "devise-i18n-views"
+* gem "mini_magick"
+* gem "image_processing", "~> 1.2"
 
 # テーブル設計（仮）
 
@@ -22,10 +31,6 @@
 | email              | string | null: false, unique: true |
 | encrypted_password | string | null: false |
 
-### Association
-
-後に記載
-
 ## postsテーブル
 
 | Column        | Type       | Options     |
@@ -33,62 +38,10 @@
 | user_id       | references | null: false |
 | text          | string     | null: false |
 
-### Association
+# 今後の実装内容
 
-後に記載
-
-## tagsテーブル
-
-| Column        | Type       | Options     |
-| ------------- | ---------- | ----------- |
-| post_id       | references | null: false |
-| text          | string     | null: false |
-
-### Association
-
-後に記載
-
-## post_tagsテーブル
-
-| Column        | Type       | Options     |
-| ------------- | ---------- | ----------- |
-| tag_id        | references | null: false |
-| post_id       | references | null: false |
-
-### Association
-
-後に記載
-
-## commentsテーブル
-
-| Column        | Type       | Options     |
-| ------------- | ---------- | ----------- |
-| user_id       | references | null: false |
-| post_id       | references | null: false |
-| text          | references | null: false |
-
-### Association
-
-後に記載
-
-## likesテーブル
-
-| Column        | Type       | Options     |
-| ------------- | ---------- | ----------- |
-| user_id       | references | null: false |
-| post_id       | references | null: false |
-
-### Association
-
-後に記載
-
-## photosテーブル
-
-| Column        | Type       | Options     |
-| ------------- | ---------- | ----------- |
-| post_id       | references | null: false |
-| image         | text       | null: false |
-
-### Association
-
-後に記載
+* ユーザーにプロフィール情報を持たせる
+* コメント機能を実装する
+* タグ付けれるようにし、利便性を向上させる
+* ダイレクトメッセージみたいな機能を実装する
+* イイネ機能を実装する

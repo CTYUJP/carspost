@@ -3,7 +3,6 @@ class CreatePosts < ActiveRecord::Migration[7.0]
     create_table :posts do |t|
       t.references :user
       t.string :text, null: false
-      t.text :image
       t.timestamps
     end
   end

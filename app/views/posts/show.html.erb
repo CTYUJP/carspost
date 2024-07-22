@@ -5,11 +5,13 @@
         <div class="post_body">
           <%= link_to @post.user.name, user_path(@post.user), class: 'post_user' %>
           <div class="post_img">
-            <%= image_tag @post.image %>
+            <% if @post.image.attached? %>
+              <%= image_tag @post.image.variant(resize: "660x470") %>
+            <% end %>
           </div>
-            <p class="post_text">
-              <%= @post.text %>
-            </p>
+          <p class="post_text">
+            <%= @post.text %>
+          </p>
         </div>
           <div class="post_menu">
             <% if user_signed_in? && current_user.id == @post.user_id %>
@@ -20,3 +22,4 @@
     </div>
   </div>
 </main>
+
